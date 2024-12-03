@@ -9,12 +9,11 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -42,31 +41,31 @@ export const Skills = () => {
                      
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="HTML Logo" />
                                 <h5>HTML</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={meter2} alt="CSS Logo" />
                                 <h5>CSS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={meter3} alt="JavaScript Logo" />
                                 <h5>JavaScript</h5>
                             </div>
                             <div className="item">
-                                <img src={meter4} alt="Image" />
+                                <img src={meter4} alt="Node.js Logo" />
                                 <h5>Node.js</h5>
                             </div>
                             <div className="item">
-                                <img src={meter5} alt="Image" />
+                                <img src={meter5} alt="React.js Logo" />
                                 <h5>React.js</h5>
                             </div>
                             <div className="item">
-                                <img src={meter6} alt="Image" />
+                                <img src={meter6} alt="Python Logo" />
                                 <h5>Python</h5>
                             </div>
                             <div className="item">
-                                <img src={meter7} alt="Image" />
+                                <img src={meter7} alt="Java Logo" />
                                 <h5>Java</h5>
                             </div>
                         </Carousel>
@@ -74,7 +73,7 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="Background decorative pattern" />
     </section>
   )
 }

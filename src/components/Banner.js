@@ -15,17 +15,7 @@ export const Banner = () => {
   // State for toggling section descriptions
   const [activeSection, setActiveSection] = useState("");
 
-  // Include delta and tick in the dependencies array
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [delta, tick]); // Fixed dependencies
-
+  // Define the tick function before useEffect to avoid ReferenceError
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -50,6 +40,16 @@ export const Banner = () => {
       setDelta(150);
     }
   };
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
 
   const handleSectionToggle = (section) => {
     setActiveSection(activeSection === section ? "" : section);
